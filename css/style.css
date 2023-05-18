@@ -1,4 +1,9 @@
-*{
-    margin: 0px;
-    padding: 0px;
+/* header */
+header nav .logo img {
+    width: 75px;
+}
+
+header .carousel img{
+    width: 1300px;
+    height: 545px;
 }
