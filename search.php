@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <title>Daftar akun</title>
+        <title>Pilih Pelatihan</title>
     </head>
     <body>
         <header>
@@ -41,42 +41,12 @@
             </nav>
         </header>
         <main>
-            <div id="login">
-                <h1>Register</h1>
-                <p>Sudah punya akun ? <a href="#">Login</a></p>
-                <form action="#">
-                    <!-- <div>
-                        <label>Email</label>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label>Password</label>
-                        <input type="password">
-                    </div>
-                    <div>
-                        <input type="button" value="Masuk">
-                    </div> -->
-                    <div class="mb-3">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email address</label>
-                        <input type="text" class="form-control" placeholder="name@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Re-Password</label>
-                        <input type="password" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <input type="button" class="form-control btn btn-primary" value="Register">
-                    </div>
-                </form>
-            </div>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
         </main>
         <footer>
             <div class="container" id="footer_contain">
