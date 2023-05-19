@@ -13,14 +13,14 @@
     <body>
         <!-- header -->
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <a class="navbar-brand logo" href="#"><img src="images/Logo-Darmajaya.png"></a>
-                        <ul class="navbar-nav ms-auto">
+                        <ul class="navbar-nav ms-auto menu">
                             <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">HOME</a>
                             </li>
@@ -69,39 +69,143 @@
         </header>
         <!-- contain -->
         <main>
-            
+            <div class="row container" id="layanan">
+                <div class="col-lg-6">
+                    <img src="images/img_service.png">
+                </div>
+                <div class="col-lg-6 info_layanan">
+                    <h3>Lembaga Sertifikasi Profesi Darmajaya</h3>
+                    <p>
+                        Adalah Lembaga Sertifikasi yang bergerak di dibidang pendidikan yang telah mendapatkan lisensi 
+                        BNSP untuk melakukan sertifikasi untuk mahasiswa/i Institut Informatika dan Bisnis Darmajaya
+                    </p>
+                    <ul class="list_layanan">
+                        <li>
+                        <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Data Analaysis</p>
+                        </li>
+                        <li>
+                        <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Membuat Website Sederhana</p>
+                        </li>
+                        <li>
+                            <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Pelatihan Photoshop</p>
+                        </li>
+                        <li>
+                            <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Desain Menggunakan Canva</p>
+                        </li>
+                        <li>
+                            <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Digital Marketing</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- testimoni -->
+            <div class="row container center" id="testimoni">
+                <h2>Testimoni Lulusan</h2>
+                <p>Pendapat mahasiswa setelah mendapatkan sertifikat</p>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card mb-3 mx-auto" style="max-width: 540px; background-color: #F1F3FF;">
+                                <div class="row row_testimoni">
+                                    <div class="col-lg-4">
+                                        <img src="images/img_photo.png" class="img-fluid rounded-start img_testimoni" alt="...">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body testimonials">
+                                            <img src="images/Rate.png" alt="">
+                                            <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem
+                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit, sed do eiusmod”</p>
+                                            <p class="card-text"><small class="text-muted">John Dee 32, Bromo</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card mb-3 mx-auto " style="max-width: 540px; background-color: #F1F3FF;">
+                                <div class="row g-0 row_testimoni">
+                                    <div class="col-lg-4">
+                                        <img src="images/img_photo 1.png" class="img-fluid rounded-start img_testimoni" alt="...">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body testimonials">
+                                            <img src="images/Rate.png">
+                                            <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem
+                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit, sed do eiusmod”</p>
+                                            <p class="card-text"><small class="text-muted">John Dee 32, Bromo</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card mb-3 mx-auto" style="max-width: 540px; background-color: #F1F3FF;">
+                                <div class="row g-0 row_testimoni">
+                                    <div class="col-md-4">
+                                        <img src="images/img_photo 1.png" class="img-fluid rounded-start img_testimoni" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body testimonials">
+                                            <img src="images/Rate.png" alt="">
+                                            <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem
+                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit, sed do eiusmod”</p>
+                                            <p class="card-text"><small class="text-muted">John Dee 32, Bromo</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="button_testimoni">
+                            <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" class="testimonial-media"><img
+                                src="asset/Left button.png" alt=""></a>
+                            <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" class="testimonial-media"><img
+                                src="asset/Right button.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
-            <div class="container container_content">
+            <div class="container" id="footer_contain">
                 <div class="row">
-                    <!-- addres -->
-                    <div class="col-lg-3 ">
-                    <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
-                    <p>binarcarrental@gmail.com</p>
-                    <p>081-233-334-808</p>
-                    </div>
-                    <!-- navigation -->
-                    <div class="col-lg-3 nav_footer">
-                    <a href="#Our_Services">Our Services</a>
-                    <a href="#Why_Us">Why Us</a>
-                    <a href="#Testimonial">Testimonial</a>
-                    <a href="#FAQ">FAQ</a>
+                    <div class="col-lg-3">
+                        <p>Copyright darmajaya 2023</p>
+                        <img src="images/logo-darmajaya.png" style="width: 75px;">
                     </div>
                     <!-- social media -->
                     <div class="col-lg-3">
-                    <div class="sosmed">
-                        <p>Connect with us</p>
-                        <a href=""><img src="asset/icon_facebook.png" alt=""></a>
-                        <a href=""><img src="asset/icon_instagram.png" alt=""></a>
-                        <a href=""><img src="asset/icon_twitter.png" alt=""></a>
-                        <a href=""><img src="asset/icon_mail.png" alt=""></a>
-                        <a href=""><img src="asset/icon_twitch.png" alt=""></a>
+                        <div class="sosmed">
+                            <p>Connect with us</p>
+                            <a href=""><img src="asset/icon_facebook.png" alt=""></a>
+                            <a href=""><img src="asset/icon_instagram.png" alt=""></a>
+                            <a href=""><img src="asset/icon_twitter.png" alt=""></a>
+                            <a href=""><img src="asset/icon_mail.png" alt=""></a>
+                            <a href=""><img src="asset/icon_twitch.png" alt=""></a>
+                        </div>
                     </div>
-
+                    <!-- navigation -->
+                    <div class="col-lg-1 nav_footer">
+                        <a href="#Our_Services">Our Services</a>
+                        <a href="#Why_Us">Why Us</a>
+                        <a href="#Testimonial">Testimonial</a>
+                        <a href="#FAQ">FAQ</a>
                     </div>
-                    <div class="col-lg-3">
-                    <p>Copyright Binar 2022</p>
-                    <img src="asset/Rectangle 74.png">
+                    <!-- addres -->
+                    <div class="col-lg-3 ">
+                        <p>Jl. ZA. Pagar Alam No.93, Gedong Meneng, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35141</p>
+                        <p>darmajaya_help@darmaja.ac.id</p>
+                        <p>081-233-334-808</p>
                     </div>
                 </div>
             </div>
