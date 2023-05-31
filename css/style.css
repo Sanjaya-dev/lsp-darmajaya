@@ -15,6 +15,10 @@ nav .menu a{
     color: white !important;
 }
 /* main */
+main {
+    background: #fff;
+}
+
 #layanan{
     margin-top: 50px;
 }
@@ -25,9 +29,12 @@ nav .menu a{
     margin-top: 50px;
 }
 /* footer */
+
 footer {
     background-color: #0066B3;
     color: white;
+
+  
 }
 
 footer #footer_contain{
@@ -40,9 +47,29 @@ footer #footer_contain .nav_footer a{
 
 }
 
-
 /* login page */
 div#login {
     margin: 126px 503px;
     width: 30%;
 }
+
+/* dashboard admin */
+#list_dashboard li {list-style: none;width: 100%;text-align: left;padding: 10px;background: #ded9d9;margin-top: 5px;}
+
+#list_dashboard li:hover{
+    background:orange;
+}
+
+#list_dashboard li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: black;
+}
+
+
+.menu_dashboard #list_dashboard {
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+

@@ -1,4 +1,15 @@
 <?php
+    session_start();
+    // di gunakan untuk mengakses semua isi file helper.php
+    include_once("function/koneksi.php");
+    include_once("function/helper.php");
+
+    // echo $koneksi;
+    $page = isset ($_GET['page']) ? $_GET['page']: false; //melakukan pengecekan apakah terdapat variable page, jika ada maka variable page akan berisi nilai
+
+    $nama_lengkap = isset ($_SESSION['nama_lengkap']) ? $_SESSION['nama_lengkap']: false;
+    $level = isset ($_SESSION['level']) ? $_SESSION['level']: false;
+    $user_id = isset ($_SESSION['user_id']) ? $_SESSION['user_id']: false;
 
 ?>
 <!DOCTYPE html>
@@ -19,162 +30,82 @@
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a class="navbar-brand logo" href="#"><img src="images/Logo-Darmajaya.png"></a>
+                        <a class="navbar-brand logo" href="<?php echo BASE_URL; ?>"><img src="images/Logo-Darmajaya.png"></a>
                         <ul class="navbar-nav ms-auto menu">
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                                <a class="nav-link active" aria-current="page" href="#">HOME</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">PROFIL</a>
+                                <a class="nav-link" href="#">PROFIL</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">MEDIA INFORMASI</a>
+                                <a class="nav-link" href="#">MEDIA INFORMASI</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">SERTIFIKASI</a>
+                                <a class="nav-link" href="#">SERTIFIKASI</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">KONTAK KAMI</a>
+                                <a class="nav-link" href="#">KONTAK KAMI</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">LOGIN</a>
+                                <a class="nav-link" href="<?php echo BASE_URL."index.php?page=dashboard";?>">DASHBOARD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo BASE_URL."index.php?page=login"; ?>">
+                                    <?php
+                                        if($user_id){
+                                            echo $nama_lengkap;
+                                        }else{
+                                            echo "LOGIN";
+                                        }
+                                    ?>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="images/darmajaya_foto.jpg" class="d-block" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                        <img src="images/about_us.jpg" class="d-block" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+            <?php
+                if($page == false){
+                    echo '
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="images/darmajaya_foto.jpg" class="d-block" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="10000">
+                                <img src="images/about_us.jpg" class="d-block" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>';
+                }
+
+            ?>
         </header>
         <!-- contain -->
         <main>
-            <div class="row container" id="layanan">
-                <div class="col-lg-6">
-                    <img src="images/img_service.png">
-                </div>
-                <div class="col-lg-6 info_layanan">
-                    <h3>Lembaga Sertifikasi Profesi Darmajaya</h3>
-                    <p>
-                        Adalah Lembaga Sertifikasi yang bergerak di dibidang pendidikan yang telah mendapatkan lisensi 
-                        BNSP untuk melakukan sertifikasi untuk mahasiswa/i Institut Informatika dan Bisnis Darmajaya
-                    </p>
-                    <ul class="list_layanan">
-                        <li>
-                        <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Data Analaysis</p>
-                        </li>
-                        <li>
-                        <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Membuat Website Sederhana</p>
-                        </li>
-                        <li>
-                            <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Pelatihan Photoshop</p>
-                        </li>
-                        <li>
-                            <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Desain Menggunakan Canva</p>
-                        </li>
-                        <li>
-                            <p><img class="icom_circle-check" src="images/icon_check.png" alt="check">Digital Marketing</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- testimoni -->
-            <div class="row container center" id="testimoni">
-                <h2>Testimoni Lulusan</h2>
-                <p>Pendapat mahasiswa setelah mendapatkan sertifikat</p>
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card mb-3 mx-auto" style="max-width: 540px; background-color: #F1F3FF;">
-                                <div class="row row_testimoni">
-                                    <div class="col-lg-4">
-                                        <img src="images/img_photo.png" class="img-fluid rounded-start img_testimoni" alt="...">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="card-body testimonials">
-                                            <img src="images/Rate.png" alt="">
-                                            <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem
-                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do eiusmod”</p>
-                                            <p class="card-text"><small class="text-muted">John Dee 32, Bromo</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card mb-3 mx-auto " style="max-width: 540px; background-color: #F1F3FF;">
-                                <div class="row g-0 row_testimoni">
-                                    <div class="col-lg-4">
-                                        <img src="images/img_photo 1.png" class="img-fluid rounded-start img_testimoni" alt="...">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="card-body testimonials">
-                                            <img src="images/Rate.png">
-                                            <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem
-                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do eiusmod”</p>
-                                            <p class="card-text"><small class="text-muted">John Dee 32, Bromo</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card mb-3 mx-auto" style="max-width: 540px; background-color: #F1F3FF;">
-                                <div class="row g-0 row_testimoni">
-                                    <div class="col-md-4">
-                                        <img src="images/img_photo 1.png" class="img-fluid rounded-start img_testimoni" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body testimonials">
-                                            <img src="images/Rate.png" alt="">
-                                            <p class="card-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem
-                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do eiusmod”</p>
-                                            <p class="card-text"><small class="text-muted">John Dee 32, Bromo</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="button_testimoni">
-                            <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" class="testimonial-media"><img
-                                src="asset/Left button.png" alt=""></a>
-                            <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" class="testimonial-media"><img
-                                src="asset/Right button.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <?php
+            $fileName = "$page.php";
+            
+            if(file_exists($fileName)){
+                include_once($fileName); //jika ada maka akan memasukan file ke script php ini
+            }else{
+                include_once("main.php");
+            }
+        ?>
         </main>
         <footer>
             <div class="container" id="footer_contain">
