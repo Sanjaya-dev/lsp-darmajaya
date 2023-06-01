@@ -21,7 +21,7 @@
                         <td>$row[kategori]</td>
                         <td>$row[status]</td>
                         <td>
-                            <a href='".BASE_URL."index.php?page=dashboard&module=kategori&action=form&kategori=$row[kategori_id]'>Edit</a>
+                            <a href='".BASE_URL."index.php?page=dashboard&module=kategori&action=form&kategori_id=$row[kategori_id]'>Edit</a>
                         </td>
                     </tr>";
                 $nomor ++;

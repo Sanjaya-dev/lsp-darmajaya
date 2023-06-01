@@ -73,3 +73,22 @@ div#login {
 }
 
 
+
+
+.content_dashboard {
+    margin-top: 14px !important;
+    background: azure;
+}
+
+.content_dashboard form {
+    padding-top: 10px;
+}
+
+.content_dashboard form label {
+    font-weight: bold;
+    color: #1e5474;
+}
+
+.content_dashboard form .element_status {
+    display: block;
+}
