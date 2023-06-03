@@ -14,6 +14,10 @@ nav{
 nav .menu a{
     color: white !important;
 }
+
+.dropdown-menu {
+    --bs-dropdown-bg :#0d6efd;
+}
 /* main */
 main {
     background: #fff;
@@ -72,9 +76,6 @@ div#login {
     padding-top: 10px;
 }
 
-
-
-
 .content_dashboard {
     margin-top: 14px !important;
     background: azure;
@@ -91,4 +92,15 @@ div#login {
 
 .content_dashboard form .element_status {
     display: block;
+}
+/* list kategori */
+.frame-tambah {
+    text-align: right;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+/* form pelatihan */
+.content_dashboard .input_gambar {
+    width: 250px;
 }

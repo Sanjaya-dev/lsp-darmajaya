@@ -51,15 +51,28 @@
                                 <a class="nav-link" href="<?php echo BASE_URL."index.php?page=dashboard";?>">DASHBOARD</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo BASE_URL."index.php?page=login"; ?>">
-                                    <?php
-                                        if($user_id){
-                                            echo $nama_lengkap;
-                                        }else{
-                                            echo "LOGIN";
-                                        }
-                                    ?>
-                                </a>
+                                <?php
+                                    if($user_id){
+                                        echo '
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="<?php echo BASE_URL."index.php?page=login"; ?>" role="button" aria-expanded="false">
+                                                <?php
+                                                    if($user_id){
+                                                        echo $nama_lengkap;
+                                                    }else{
+                                                        echo "LOGIN";
+                                                    }
+                                                ?>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="'.BASE_URL.'index.php?page=dashboard">Dashboard</a></li>
+                                                <li><a class="dropdown-item" href="#">Logout</a></li>;
+                                            </ul>
+                                        </li>';                                
+                                    }else{
+                                        echo'<a class="nav-link" href="'.BASE_URL.'index.php?page=login">LOGIN</a>';
+                                    }
+                                ?>
                             </li>
                         </ul>
                     </div>
