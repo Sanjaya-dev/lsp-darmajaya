@@ -104,3 +104,9 @@ div#login {
 .content_dashboard .input_gambar {
     width: 250px;
 }
+
+/* page pelatihan */
+.card_pelatihan a {
+    text-decoration: none;
+    color: black;
+}

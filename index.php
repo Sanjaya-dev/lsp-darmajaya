@@ -42,7 +42,7 @@
                                 <a class="nav-link" href="#">MEDIA INFORMASI</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">SERTIFIKASI</a>
+                                <a class="nav-link" href="<?php echo BASE_URL."index.php?page=search"?>">SERTIFIKASI</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">KONTAK KAMI</a>
@@ -54,19 +54,13 @@
                                 <?php
                                     if($user_id){
                                         echo '
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="<?php echo BASE_URL."index.php?page=login"; ?>" role="button" aria-expanded="false">
-                                                <?php
-                                                    if($user_id){
-                                                        echo $nama_lengkap;
-                                                    }else{
-                                                        echo "LOGIN";
-                                                    }
-                                                ?>
-                                            </a>
-                                            <ul class="dropdown-menu">
+                                        <li class="nav-item dropdown">';
+                                        echo '<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">';
+                                                echo $nama_lengkap;
+                                        echo'</a>';
+                                        echo'<ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="'.BASE_URL.'index.php?page=dashboard">Dashboard</a></li>
-                                                <li><a class="dropdown-item" href="#">Logout</a></li>;
+                                                <li><a class="dropdown-item" href="'.BASE_URL.'index.php?page=logout">Logout</a></li>;
                                             </ul>
                                         </li>';                                
                                     }else{

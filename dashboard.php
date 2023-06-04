@@ -29,8 +29,9 @@
     <div class="col content_dashboard">
       <?php
         $file = "module/$module/$action.php";
-
+        // mengecek apakah ada file tersebut
         if(file_exists($file)){
+          // jika ada maka tampilkan
           include_once($file);
         }else{
           echo "<h2>maaf halam yang di cari tidak di temukan</h2>";

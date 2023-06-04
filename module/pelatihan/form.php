@@ -7,6 +7,13 @@
     $gambar = "";
     $tanggal = "";
     $dosen = "";
+    $materi_m1 = "";
+    $materi_m2 = "";
+    $materi_m3 = "";
+    $materi_m4 = "";
+    $materi_m5 = "";
+    $materi_m6 = "";
+    $materi_m7 = "";
     $status = "";
     $button = "Add";
 
@@ -20,6 +27,14 @@
         $tanggal = $row['tanggal'];
         $deskripsi = $row['deskripsi'];
         $dosen = $row['dosen'];
+        $materi_m1 = $row['materi_m1'];
+        $materi_m2 = $row['materi_m2'];
+        $materi_m3 = $row['materi_m3'];
+        $materi_m4 = $row['materi_m4'];
+        $materi_m5 = $row['materi_m5'];
+        $materi_m6 = $row['materi_m6'];
+        $materi_m7 = $row['materi_m7'];
+
         $button = 'Update';
 
         $gambar = "<img src='".BASE_URL."images/pelatihan/$gambar' style='width: 200px;vertical-align: middle;' />";
@@ -67,6 +82,36 @@
     <div class="mb-3 elemet_form">
         <label class="form-label">Gambar</label>
         <input type="file" class="form-control input_gambar" name="file"/> <?php echo $gambar; ?>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">Materi Minggu 1</label>
+            <input type="file" class="form-control input_gambar" name="materi_m1"/> <?php echo $materi_m1; ?>
+        </div>
+        <div class="col">
+            <label class="form-label">Materi Minggu 2</label>
+            <input type="file" class="form-control input_gambar" name="materi_m2"/> <?php echo $materi_m2; ?>
+        </div>
+        <div class="col">
+        <label class="form-label">Materi Minggu 3</label>
+            <input type="file" class="form-control input_gambar" name="materi_m3"/> <?php echo $materi_m3; ?>
+        </div>
+        <div class="col">
+            <label class="form-label">Materi Minggu 4</label>
+            <input type="file" class="form-control input_gambar" name="materi_m4"/> <?php echo $materi_m4; ?>
+        </div>
+        <div class="col">
+            <label class="form-label">Materi Minggu 5</label>
+            <input type="file" class="form-control input_gambar" name="materi_m5"/> <?php echo $materi_m5; ?>
+        </div>
+        <div class="col">
+            <label class="form-label">Materi Minggu 6</label>
+            <input type="file" class="form-control input_gambar" name="materi_m6"/> <?php echo $materi_m6; ?>
+        </div>
+        <div class="col">
+            <label class="form-label">Materi Minggu 7</label>
+            <input type="file" class="form-control input_gambar" name="materi_m7"/> <?php echo $materi_m7; ?>
+        </div>
     </div>
     <div class="mb-3 elemet_form">
         <label class="form-label">Status</label>
