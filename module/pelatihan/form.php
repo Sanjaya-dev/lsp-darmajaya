@@ -5,6 +5,7 @@
     $nama_pelatihan = "";
     $deskripsi = "";
     $gambar = "";
+    $file_ujian = "";
     $tanggal = "";
     $dosen = "";
     $materi_m1 = "";
@@ -23,6 +24,7 @@
         $nama_pelatihan = $row['nama_pelatihan'];
         $kategori_id = $row['kategori_id'];
         $gambar = $row['gambar'];
+        $file_ujian = $row['file_ujian'];
         $status = $row['status'];
         $tanggal = $row['tanggal'];
         $deskripsi = $row['deskripsi'];
@@ -82,6 +84,10 @@
     <div class="mb-3 elemet_form">
         <label class="form-label">Gambar</label>
         <input type="file" class="form-control input_gambar" name="file"/> <?php echo $gambar; ?>
+    </div>
+    <div class="mb-3 elemet_form">
+        <label class="form-label">Soal Ujian</label>
+        <input type="file" class="form-control input_gambar" name="file_ujian"/> <?php echo $file_ujian; ?>
     </div>
     <div class="row">
         <div class="col">

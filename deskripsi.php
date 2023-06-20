@@ -13,9 +13,12 @@
                         <div class='card-body'>
                             <div id='frame-harga'>
                                 <span>$row[tanggal]</span>
-                                <span>$row[dosen]</span>
-                                <a href='".BASE_URL."tambah_keranjang.php?pelatihan_id=$row[pelatihan_id]'>Materi</a>
-                                <a href='".BASE_URL."tambah_keranjang.php?pelatihan_id=$row[pelatihan_id]'>+ ADD TO CHART</a>
+                                <span>$row[dosen]</span>";
+                                if($user_id){
+                                    echo "<a href='".BASE_URL."index.php?page=materi_pelatihan&pelatihan_id=$row[pelatihan_id]&user_id=$user_id'>Materi</a>
+                                    <a href='".BASE_URL."tambah_keranjang.php?pelatihan_id=$row[pelatihan_id]'>+ ADD TO CHART</a>";
+                                }
+                                echo "
                             </div>
                             <div id='keterangan'>
                                 <b>keterangan</b>$row[deskripsi]

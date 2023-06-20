@@ -35,21 +35,21 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">HOME</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">PROFIL</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">MEDIA INFORMASI</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo BASE_URL."index.php?page=search"?>">SERTIFIKASI</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">KONTAK KAMI</a>
-                            </li>
-                            <li class="nav-item">
+                            </li> -->
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="<?php echo BASE_URL."index.php?page=dashboard";?>">DASHBOARD</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <?php
                                     if($user_id){

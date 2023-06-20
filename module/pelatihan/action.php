@@ -19,6 +19,7 @@
     $button = $_POST['button'];
 
     $update_gambar = '';
+    $update_soal = '';
     $update_materi_m1 = '';
     $update_materi_m2 = '';
     $update_materi_m3 = '';
@@ -33,6 +34,11 @@
         move_uploaded_file($_FILES["file"]["tmp_name"],"../../images/pelatihan/".$name_file);
 
         $update_gambar = ",gambar='$name_file'";
+    }elseif(!empty($_FILES["file_ujian"]["name"])){
+        $soal_ujian_file = $_FILES["file_ujian"]["name"];
+        move_uploaded_file($_FILES["file_ujian"]["tmp_name"],"../../file/soal_ujian/".$soal_ujian_file);
+
+        $update_soal = ",file_ujian='$soal_ujian_file'";
     }elseif(!empty($_FILES["materi_m1"]["name"])){
         $materi_m1_file = $_FILES["materi_m1"]["name"];
         move_uploaded_file($_FILES["materi_m1"]["tmp_name"],"../../file/materi_pelatihan/".$materi_m1_file);
@@ -84,7 +90,8 @@
                                                     tanggal='$tanggal',
                                                     dosen='$dosen',
                                                     status='$status'
-                                                    $update_gambar 
+                                                    $update_gambar
+                                                    $update_soal 
                                                     $update_materi_m1
                                                     $update_materi_m2
                                                     $update_materi_m3
