@@ -12,11 +12,10 @@
                         </div>
                         <div class='card-body'>
                             <div id='frame-harga'>
-                                <span>$row[tanggal]</span>
-                                <span>$row[dosen]</span>";
+                                <span><b>Tanggal : $row[tanggal]</b></span><br/>
+                                <span><b>Dosen : $row[dosen]</b></span><br/>";
                                 if($user_id){
-                                    echo "<a href='".BASE_URL."index.php?page=materi_pelatihan&pelatihan_id=$row[pelatihan_id]&user_id=$user_id'>Materi</a>
-                                    <a href='".BASE_URL."tambah_keranjang.php?pelatihan_id=$row[pelatihan_id]'>+ ADD TO CHART</a>";
+                                    echo "<a href='".BASE_URL."index.php?page=materi_pelatihan&pelatihan_id=$row[pelatihan_id]&user_id=$user_id'>Materi</a>";
                                 }
                                 echo "
                             </div>

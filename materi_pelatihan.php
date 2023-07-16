@@ -24,12 +24,12 @@
         }
     }
 </script>
-<div class="row">
+<div class="container row">
             <?php
                 if($pelatihan_id){
-                    echo "<div class='col-lg-4'>";
-                        echo "<div class='card card_pelatihan' style='width: 25rem;'>
-                            <a href='".BASE_URL."index.php?page=deskripsi&pelatihan_id=$row[pelatihan_id]'><img src='".BASE_URL."images/pelatihan/$row[gambar]' class='card-img-top' alt='$row[gambar]'>
+                    echo "<div class='col-lg-6'>";
+                        echo "<div class='card card_pelatihan' style='width: 24rem;'>
+                            <img src='".BASE_URL."images/pelatihan/$row[gambar]' class='card-img-top' alt='$row[gambar]'>
                             <div class='card-body'>
                                 <h5 class='card-title'>$row[nama_pelatihan]</h5>
                                 <p class='card-text'>Tanggal : $row[tanggal]</p>
@@ -40,7 +40,7 @@
                     echo "</div>";
                 }
             ?>
-    <div class=col-lg-7>
+    <div class="col-lg-6">
         <!-- <form action="" method="">
             
         </form> -->
@@ -48,7 +48,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Minggu 1
+                   <b>Minggu 1</b>
                 </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -57,7 +57,7 @@
                             if(empty($row['materi_m1'])){
                                 echo "kosong";
                             }else{
-                                echo "<iframe src='".BASE_URL."file/materi_pelatihan/$row[materi_m1]' width='700' height='400'></iframe>";
+                                echo "<iframe src='".BASE_URL."file/materi_pelatihan/$row[materi_m1]' width='500' height='300'></iframe>";
                             }
                         ?>
                     </div>
@@ -67,7 +67,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Minggu 2
+                        <b>Minggu 2</b>
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -86,7 +86,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Minggu 3
+                        <b>Minggu 3</b>
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -105,7 +105,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Minggu 4
+                        <b>Minggu 4</b>
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -124,7 +124,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Minggu 5
+                        <b>Minggu 5</b>
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -143,7 +143,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        Minggu 6
+                        <b>Minggu 6</b>
                     </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -162,7 +162,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        Minggu 7
+                        <b>Minggu 7</b>
                     </button>
                 </h2>
                 <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">

@@ -8,6 +8,7 @@
     $file_ujian = "";
     $tanggal = "";
     $dosen = "";
+    $link_sertifikat = "";
     $materi_m1 = "";
     $materi_m2 = "";
     $materi_m3 = "";
@@ -29,6 +30,7 @@
         $tanggal = $row['tanggal'];
         $deskripsi = $row['deskripsi'];
         $dosen = $row['dosen'];
+        $link_sertifikat = $row['link_sertifikat'];
         $materi_m1 = $row['materi_m1'];
         $materi_m2 = $row['materi_m2'];
         $materi_m3 = $row['materi_m3'];
@@ -88,6 +90,10 @@
     <div class="mb-3 elemet_form">
         <label class="form-label">Soal Ujian</label>
         <input type="file" class="form-control input_gambar" name="file_ujian"/> <?php echo $file_ujian; ?>
+    </div>
+    <div class="mb-3 elemet_form">
+        <label class="form-label">Link Sertifikat</label>
+        <input type="url" class="form-control input_gambar" name="link_sertifikat"/> <?php echo $link_sertifikat; ?>
     </div>
     <div class="row">
         <div class="col">

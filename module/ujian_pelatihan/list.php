@@ -1,9 +1,8 @@
-<div class="frame-tambah">
-    <!-- tombol tambah kategori -->
-    <!-- <a class='btn btn-primary' href="<?php echo BASE_URL."index.php?page=dashboard&module=user&action=form";?>">+ Tambah User</a> -->
-</div>
+
 <?php
-    $query_ujian_pelatihan = mysqli_query($koneksi,"SELECT * FROM ujian_pelatihan");
+    $query_ujian_pelatihan = mysqli_query($koneksi,"SELECT * FROM ujian_pelatihan,user,pelatihan 
+                                        WHERE ujian_pelatihan.user_id = user.user_id AND ujian_pelatihan.pelatihan_id = pelatihan.pelatihan_id");
+    
 
     if(mysqli_num_rows($query_ujian_pelatihan) == 0){
         echo "<h3>Saat ini belum ada user pada tabel user</h3>";
@@ -14,20 +13,22 @@
                 <th scope='col'>Nama Lengkap</th>
                 <th scope='col'>Npm</th>
                 <th scope='col'>Pelatihan</th>
-                <th scope='col'>Status</th>
+                <th scope='col'>Waktu Ujian</th>
+                <th scope='col'>Status Ujian</th>
                 <th scope='col'>Action</th>
             </tr>";
         echo "<tbody>";
             $nomor = 1;
-            while($row = mysqli_fetch_assoc($query_user)){
+            while($row = mysqli_fetch_assoc($query_ujian_pelatihan)){
                 echo "<tr>
                         <td>$nomor</td>
                         <td>$row[nama_lengkap]</td>
-                        <td>$row[email]</td>
-                        <td>$row[level]</td>
-                        <td>$row[status]</td>
+                        <td>$row[npm]</td>
+                        <td>$row[nama_pelatihan]</td>
+                        <td>$row[waktu_ujian]</td>
+                        <td>$row[status_ujian]</td>
                         <td>
-                            <a class='btn btn-primary' href='".BASE_URL."index.php?page=dashboard&module=user&action=form&user_id=$row[user_id]'>Edit</a>
+                            <a class='btn btn-primary' href='".BASE_URL."index.php?page=dashboard&module=ujian_pelatihan&action=form&ujian_id=$row[ujian_id]'>Edit</a>
                         </td>
                     </tr>";
                 $nomor ++;

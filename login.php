@@ -2,9 +2,10 @@
      if($user_id){
         header("location:".BASE_URL);
     }
-?>
-        <main>
-            <div id="login">
+?>  
+        <div class="container">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
                 <h1>Masuk</h1>
                 <p>Belum punya akun ? <a href="<?php echo BASE_URL."index.php?page=register";?>">Daftar disini</a></p>
                 <?php
@@ -30,4 +31,5 @@
                     </div>
                 </form>
             </div>
-        </main>
+            <div class="col-lg-4"></div>
+        </div>

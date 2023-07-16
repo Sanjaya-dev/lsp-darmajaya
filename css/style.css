@@ -93,6 +93,11 @@ div#login {
 .content_dashboard form .element_status {
     display: block;
 }
+/* search */
+main select#menu_search {
+    margin: 50px 0 0 70px;
+    width: 500px;
+}
 /* list kategori */
 .frame-tambah {
     text-align: right;

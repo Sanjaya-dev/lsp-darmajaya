@@ -8,6 +8,7 @@
     $deskripsi = $_POST['deskripsi'];
     $tanggal = $_POST['tanggal'];
     $dosen = $_POST['dosen'];
+    $link_sertifikat = $_POST['link_sertifikat'];
     // $materi_m1 = $_POST['materi_m1'];
     // $materi_m2 = $_POST['materi_m2'];
     // $materi_m3 = $_POST['materi_m3'];
@@ -78,8 +79,8 @@
 
     // input dan update ke database
     if($button == "Add"){
-        mysqli_query($koneksi,"INSERT INTO pelatihan (kategori_id,nama_pelatihan,gambar,deskripsi,tanggal,dosen,materi_m1,materi_m2,materi_m3,materi_m4,materi_m5,materi_m6,materi_m7,status) 
-                    VALUES ('$kategori_id','$nama_pelatihan','$name_file','$deskripsi','$tanggal','$dosen','$materi_m1_file','$materi_m2_file','$materi_m3_file','$materi_m4_file','$materi_m5_file','$materi_m6_file','$materi_m7_file','$status')");
+        mysqli_query($koneksi,"INSERT INTO pelatihan (kategori_id,nama_pelatihan,gambar,deskripsi,tanggal,dosen,link_sertifikat,materi_m1,materi_m2,materi_m3,materi_m4,materi_m5,materi_m6,materi_m7,status) 
+                    VALUES ('$kategori_id','$nama_pelatihan','$name_file','$deskripsi','$tanggal','$dosen','$link_sertifikat','$materi_m1_file','$materi_m2_file','$materi_m3_file','$materi_m4_file','$materi_m5_file','$materi_m6_file','$materi_m7_file','$status')");
           
     }elseif($button == "Update"){
         $pelatihan_id = $_GET['pelatihan_id'];
@@ -89,6 +90,7 @@
                                                     deskripsi='$deskripsi',
                                                     tanggal='$tanggal',
                                                     dosen='$dosen',
+                                                    link_sertifikat='$link_sertifikat',
                                                     status='$status'
                                                     $update_gambar
                                                     $update_soal 

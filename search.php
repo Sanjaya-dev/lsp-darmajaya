@@ -1,6 +1,6 @@
 
-    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" onchange="location = this.value;">
-        <option selected>Open this select menu</option>
+    <select class="form-select form-select-lg mb-3" id="menu_search" aria-label=".form-select-lg example" onchange="location = this.value;">
+        <option selected>Pilih kategori pelatihan</option>
         <?php
             $query = mysqli_query($koneksi,"SELECT kategori_id, kategori FROM kategori WHERE status='on'");
             while($row = mysqli_fetch_assoc($query)){

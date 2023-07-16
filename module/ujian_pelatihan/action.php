@@ -2,16 +2,15 @@
     include_once("../../function/koneksi.php");
     include_once("../../function/helper.php");
 
-    $nama_lengkap = $_POST['nama_lengkap'];
-    $email = $_POST['email'];
-    $level = $_POST['level'];
-    $status = $_POST['status'];
+
+    $nilai = $_POST['nilai'];
+    $status_ujian = $_POST['status_ujian'];
     $button = $_POST['button'];
 
     if($button == "Update"){
-    $user_id = $_GET['user_id'];
+    $ujian_id = $_GET['ujian_id'];
 
-    mysqli_query($koneksi,"UPDATE user SET nama_lengkap='$nama_lengkap',email='$email',level='$level',status='$status' Where user_id='$user_id'");
+    mysqli_query($koneksi,"UPDATE ujian_pelatihan SET nilai='$nilai',status_ujian='$status_ujian' Where ujian_id='$ujian_id'");
     }
-    header("location:".BASE_URL."index.php?page=dashboard&module=user&action=list");
+    header("location:".BASE_URL."index.php?page=dashboard&module=ujian_pelatihan&action=list");
 ?>

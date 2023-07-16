@@ -6,6 +6,7 @@
     $user_id = isset($_GET['user_id']) ? $_GET['user_id']:false;
     // $query = mysqli_query($koneksi,"SELECT * FROM pelatihan WHERE pelatihan_id='$pelatihan_id'");
     // $row = mysqli_fetch_assoc($query);
+    $button = "Kirim";
 
     if($pelatihan_id){
         $query = mysqli_query($koneksi,"SELECT * FROM pelatihan Where pelatihan_id='$pelatihan_id'");
@@ -27,17 +28,16 @@
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-3">
-                <form action="<?php echo BASE_URL."proses_ujian.php?pelatihan_id=$pelatihan_id&user_id=$user_id"?>" method="POST" enctype="multipart/form-data">
+                <form action="<?php echo BASE_URL."proses_ujian.php?pelatihan_id=$pelatihan_id&user_id=$user_id";?>" method="POST" enctype="multipart/form-data">
                     <div class="card" style="width: 45rem; margin-top: 20px;">
                         <iframe src="<?php echo BASE_URL."file/soal_ujian/$row[file_ujian]"; ?>" width='700' height='400'></iframe>
                         <div class="card-body">
                             <?php
                                 echo"<h5 class='card-title'>$nama_pelatihan</h5>";
-                                echo"<p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>";
                             ?>
                             <input type="file" class="form-control input_gambar" name="file_jawaban_soal"/>
                         </div>
-                        <button type="submit" class="btn btn-primary" name="button">Kirim</button>
+                        <button type="submit" class="btn btn-primary" name="button" value="<?php echo $button;?>">Kirim</button>
                     </div>
                 </form>
             </div>

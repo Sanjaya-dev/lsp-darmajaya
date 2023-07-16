@@ -33,14 +33,8 @@
                         <a class="navbar-brand logo" href="<?php echo BASE_URL; ?>"><img src="images/Logo-Darmajaya.png"></a>
                         <ul class="navbar-nav ms-auto menu">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                                <a class="nav-link active" aria-current="page" href="<?php echo BASE_URL; ?>">HOME</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="#">PROFIL</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">MEDIA INFORMASI</a>
-                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo BASE_URL."index.php?page=search"?>">SERTIFIKASI</a>
                             </li>
@@ -114,40 +108,49 @@
             }
         ?>
         </main>
-        <footer>
-            <div class="container" id="footer_contain">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <p>Copyright darmajaya 2023</p>
-                        <img src="images/logo-darmajaya.png" style="width: 75px;">
-                    </div>
-                    <!-- social media -->
-                    <div class="col-lg-3">
-                        <div class="sosmed">
-                            <p>Connect with us</p>
-                            <a href=""><img src="asset/icon_facebook.png" alt=""></a>
-                            <a href=""><img src="asset/icon_instagram.png" alt=""></a>
-                            <a href=""><img src="asset/icon_twitter.png" alt=""></a>
-                            <a href=""><img src="asset/icon_mail.png" alt=""></a>
-                            <a href=""><img src="asset/icon_twitch.png" alt=""></a>
+        <?php
+            if($page == false){
+                echo '
+                <footer>
+                    <div class="container" id="footer_contain">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <p>Copyright darmajaya 2023</p>
+                                <img src="images/logo-darmajaya.png" style="width: 75px;">
+                                <img src="images/lsp_darmajaya.jfif" style="width: 75px;">
+                            </div>
+                            <!-- social media -->
+                            <div class="col-lg-4">
+                                <div class="sosmed">
+                                    <p>Connect with us</p>
+                                    <a href=""><img src="asset/icon_facebook.png" alt=""></a>
+                                    <a href=""><img src="asset/icon_instagram.png" alt=""></a>
+                                    <a href=""><img src="asset/icon_twitter.png" alt=""></a>
+                                    <a href=""><img src="asset/icon_mail.png" alt=""></a>
+                                    <a href=""><img src="asset/icon_twitch.png" alt=""></a>
+                                </div>
+                            </div>
+                            <!-- navigation -->
+                            <!-- <div class="col-lg-1 nav_footer">
+                                <a href="#Our_Services">Our Services</a>
+                                <a href="#Why_Us">Why Us</a>
+                                <a href="#Testimonial">Testimonial</a>
+                                <a href="#FAQ">FAQ</a>
+                            </div> -->
+                            <!-- addres -->
+                            <div class="col-lg-5 ">
+                                <p>Jl. ZA. Pagar Alam No.93, Gedong Meneng, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35141</p>
+                                <p>darmajaya_help@darmaja.ac.id</p>
+                                <p>081-233-334-808</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- navigation -->
-                    <div class="col-lg-1 nav_footer">
-                        <a href="#Our_Services">Our Services</a>
-                        <a href="#Why_Us">Why Us</a>
-                        <a href="#Testimonial">Testimonial</a>
-                        <a href="#FAQ">FAQ</a>
-                    </div>
-                    <!-- addres -->
-                    <div class="col-lg-3 ">
-                        <p>Jl. ZA. Pagar Alam No.93, Gedong Meneng, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35141</p>
-                        <p>darmajaya_help@darmaja.ac.id</p>
-                        <p>081-233-334-808</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+                </footer>
+                ';
+            }else {
+                false;
+            }
+        ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     </body>
 </html>

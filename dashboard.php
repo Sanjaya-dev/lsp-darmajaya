@@ -23,12 +23,12 @@
           <li <?php if($module == 'user'){echo "class='active'";}?> >
             <a href="<?php echo BASE_URL."index.php?page=dashboard&module=user&action=list";?>">User</a>
           </li>
-          <li <?php if($module == 'acc_pelatihan'){echo "class='active'";}?> >
+          <!-- <li <?php if($module == 'acc_pelatihan'){echo "class='active'";}?> >
             <a href="<?php echo BASE_URL."index.php?page=dashboard&module=acc_pelatihan&action=list";?>">Acc Pelatihan</a>
           </li>
           <li <?php if($module == 'acc_sertifikasi'){echo "class='active'";}?> >
             <a href="<?php echo BASE_URL."index.php?page=dashboard&module=acc_sertifikasi&action=list";?>">Acc Sertifikasi</a>
-          </li>
+          </li> -->
           <li <?php if($module == 'ujian_pelatihan'){echo "class='active'";}?> >
             <a href="<?php echo BASE_URL."index.php?page=dashboard&module=ujian_pelatihan&action=list";?>">Ujian Pelatihan</a>
           </li>
